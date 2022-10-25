@@ -10,21 +10,26 @@ const User = UserModel( sequelize , DataTypes )
 const conectarBD = async () =>{
     try {
         await sequelize.authenticate()
-        console.log('Se estableción conexión')
+        console.log('Se estableción conexión'.bgCyan.magenta)
         //Seleccionar Users
-        const users = await User.findAll();
-        console.log(users)
+        // const users = await User.findAll();
+        // console.log(users)
 
         //Crear 
-        const marco = await User.create({
-            name: "Marco",
-            email: "marcopolo@gmail",
-            password: "mar123",
-        });
+        // const marco = await User.create({
+        //     name: "Marco",
+        //     email: "marcopolo@gmail",
+        //     password: "mar123",
+        // });
 
     } catch (error) {
         console.log(error)
     }
 }
 
-conectarBD()
+// const update = async () =>{
+
+// }
+// 
+
+module.exports = conectarBD
