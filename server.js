@@ -4,6 +4,7 @@ const colors = require('colors')
 
 //DEPENDENCIAS A LAS RUTAS
 const bootcampRoutes = require('./routes/BootcampRoutes')
+const userRoutes = require('./routes/UserRoutes.js')
 
 //establecer el arcihvo de configuracion con variables de entorno del proyecto
 dotenv.config({
@@ -19,7 +20,7 @@ const app = express()
 })*/
 
 app.use("/api/v1/bootcamps", bootcampRoutes)
-
+app.use("/api/v1/users", userRoutes)
 //
 
 //3. EJECUTAR EL SERVIDOR DEL DESARRROLLO DE EXPRESS
